@@ -26,6 +26,8 @@ public class App {
 
         Elements reviewItemElements = new Elements();
 
+        System.out.println("The scraping process is in progress, please wait...");
+
         while (true) {
             try {
                 Thread.sleep(2000);
@@ -97,6 +99,8 @@ public class App {
 
                 pw.println(convertToCsv(data));
             });
+
+            System.out.println("Done! Check the output.scv file.");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
